@@ -1,0 +1,2 @@
+# Baracca
+magazzino 
