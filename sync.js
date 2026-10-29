@@ -87,6 +87,7 @@ const Sync = {
       this.saveCfg(c2);
       this.setStato('ok');
       if (cambiati) UI.refresh();
+      if (typeof SpeseCasa !== 'undefined') SpeseCasa.programma(500);   // dati freschi: allinea Gestione Casa
       if (manuale) UI.toast(cambiati || n ? `Sincronizzato ✓ (${n} inviati, ${cambiati} ricevuti)` : 'Già tutto aggiornato ✓');
     } catch (e) {
       this.setStato('errore', e.message);

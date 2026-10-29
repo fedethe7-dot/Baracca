@@ -83,6 +83,7 @@ const DB = {
     const i = arr.findIndex(x => x.id === r.id);
     if (i >= 0) arr[i] = r; else arr.push(r);
     if (typeof Sync !== 'undefined') Sync.schedule();
+    if (typeof SpeseCasa !== 'undefined' && !(typeof Sync !== 'undefined' && Sync.attivo())) SpeseCasa.programma();
     return r;
   },
 
@@ -109,6 +110,7 @@ const DB = {
     await this._put(table, r);
     arr[i] = r;
     if (typeof Sync !== 'undefined') Sync.schedule();
+    if (typeof SpeseCasa !== 'undefined' && !(typeof Sync !== 'undefined' && Sync.attivo())) SpeseCasa.programma();
   },
 
   _delete(table, id) {

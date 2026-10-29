@@ -1,6 +1,6 @@
 /* BARACCA — sw.js : fa funzionare l'app anche senza internet */
-const CACHE = 'baracca-v1.0.0';
-const FILES = ['./', 'index.html', 'style.css', 'db.js', 'util.js', 'sync.js', 'app.js', 'manifest.json', 'icona-baracca.svg', 'icona-baracca-192.png', 'icona-baracca-512.png'];
+const CACHE = 'baracca-v1.1.0';
+const FILES = ['./', 'index.html', 'style.css', 'db.js', 'util.js', 'sync.js', 'gestionecasa.js', 'app.js', 'manifest.json', 'icona-baracca.svg', 'icona-baracca-192.png', 'icona-baracca-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => Promise.all(FILES.map(f => c.add(f).catch(() => null)))).then(() => self.skipWaiting()));

@@ -65,6 +65,7 @@ const UI = {
     try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { this.applyColor(); this.render(); }); } catch (e) {}
     this.render();
     Sync.init();
+    if (!Sync.attivo()) SpeseCasa.programma(3000);
     if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => {});
   },
 
