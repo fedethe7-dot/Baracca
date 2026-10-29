@@ -1,5 +1,5 @@
 /* BARACCA — sw.js : fa funzionare l'app anche senza internet */
-const CACHE = 'baracca-v1.1.0';
+const CACHE = 'baracca-v1.1.1';
 const FILES = ['./', 'index.html', 'style.css', 'db.js', 'util.js', 'sync.js', 'gestionecasa.js', 'app.js', 'manifest.json', 'icona-baracca.svg', 'icona-baracca-192.png', 'icona-baracca-512.png'];
 
 self.addEventListener('install', e => {
